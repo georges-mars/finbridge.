@@ -3,7 +3,7 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
-  "homepage": "https://melau-eddy.github.io/Finbridge.",
+  "homepage": "https://melau-eddy.github.io/finbridge.",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
