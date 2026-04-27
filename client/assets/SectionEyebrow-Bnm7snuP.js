@@ -1,0 +1,1 @@
+import{j as e}from"./index-XewoqD40.js";function n({children:r,number:s}){return e.jsxs("div",{className:"flex items-center gap-3",children:[s&&e.jsx("span",{className:"eyebrow text-foreground",children:s}),e.jsxs("span",{className:"eyebrow",children:["— ",r]})]})}export{n as S};
