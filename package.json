@@ -3,9 +3,9 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
-  "homepage": "https://georges-mars.github.io/finbridge.",
+  "homepage": "https://georges-mars.github.io/ffinbridge",
   "scripts": {
-    "dev": "vite dev",
+    "dev": "vite dev",  
     "build": "vite build",
     "build:netlify": "vite build && node scripts/generate-static.js",
     "build:dev": "vite build --mode development",
