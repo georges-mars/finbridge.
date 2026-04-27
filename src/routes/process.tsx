@@ -1,20 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { SectionEyebrow } from "@/components/SectionEyebrow";
 import { processSteps } from "@/data/site";
 
-export const Route = createFileRoute("/process")({
-  head: () => ({
-    meta: [
-      { title: "Process — FinBridge Solutions" },
-      { name: "description", content: "A simple, transparent delivery flow designed for fast iteration and reliable production outcomes." },
-      { property: "og:title", content: "Our Process — FinBridge Solutions" },
-      { property: "og:description", content: "Discovery, architecture, build and iterate, deploy and support." },
-    ],
-  }),
-  component: ProcessPage,
-});
-
-function ProcessPage() {
+export default function ProcessPage() {
   return (
     <>
       <section className="section-paper border-b border-border">

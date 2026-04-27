@@ -1,20 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { SectionEyebrow } from "@/components/SectionEyebrow";
 import { skillGroups } from "@/data/site";
 
-export const Route = createFileRoute("/skills")({
-  head: () => ({
-    meta: [
-      { title: "Skills — FinBridge Solutions" },
-      { name: "description", content: "Core engineering depth across backend systems, mobile and frontend platforms, embedded devices, and modern cloud operations." },
-      { property: "og:title", content: "Capabilities — FinBridge Solutions" },
-      { property: "og:description", content: "Backend, embedded, frontend, mobile, cloud, and DevOps capabilities." },
-    ],
-  }),
-  component: SkillsPage,
-});
-
-function SkillsPage() {
+export default function SkillsPage() {
   return (
     <>
       <section className="section-paper border-b border-border">

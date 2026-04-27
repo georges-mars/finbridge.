@@ -1,11 +1,9 @@
-import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  base: "/ffinbridge./",
-  cloudflare: false,
-  tanstackStart: {
-    client: {
-      entry: "./src/client-entry.tsx",
-    },
-  },
+  base: "/ffinbridge/",
+  plugins: [react(), tailwindcss(), tsconfigPaths()],
 });

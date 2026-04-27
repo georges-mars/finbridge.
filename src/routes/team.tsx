@@ -1,20 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { SectionEyebrow } from "@/components/SectionEyebrow";
 import { team } from "@/data/site";
 
-export const Route = createFileRoute("/team")({
-  head: () => ({
-    meta: [
-      { title: "Team — FinBridge Solutions" },
-      { name: "description", content: "Two engineers, one full stack. A focused two-person team that moves quickly across product, platform, firmware, and infrastructure." },
-      { property: "og:title", content: "Team — FinBridge Solutions" },
-      { property: "og:description", content: "Meet Eddy and George — the two engineers behind FinBridge Solutions." },
-    ],
-  }),
-  component: TeamPage,
-});
-
-function TeamPage() {
+export default function TeamPage() {
   return (
     <>
       <section className="section-paper border-b border-border">

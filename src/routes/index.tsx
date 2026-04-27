@@ -1,21 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { SectionEyebrow } from "@/components/SectionEyebrow";
 import { services, projects, processSteps } from "@/data/site";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "FinBridge Solutions — Engineering that ships" },
-      { name: "description", content: "A two-person engineering team covering mobile apps, backend APIs, IoT firmware, and hardware. Full-stack. Production-ready. End-to-end." },
-      { property: "og:title", content: "FinBridge Solutions — Engineering that ships" },
-      { property: "og:description", content: "Mobile, backend, IoT, and full-stack systems delivered end-to-end by a focused two-person team." },
-    ],
-  }),
-  component: HomePage,
-});
-
-function HomePage() {
+export default function HomePage() {
   return (
     <>
       {/* HERO — paper, centered, editorial */}

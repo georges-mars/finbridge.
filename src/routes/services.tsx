@@ -1,21 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { SectionEyebrow } from "@/components/SectionEyebrow";
 import { services } from "@/data/site";
 
-export const Route = createFileRoute("/services")({
-  head: () => ({
-    meta: [
-      { title: "Services — FinBridge Solutions" },
-      { name: "description", content: "Mobile, backend, full-stack web, IoT and embedded systems, cloud and DevOps, plus data and AI integration." },
-      { property: "og:title", content: "Services — FinBridge Solutions" },
-      { property: "og:description", content: "Full-spectrum engineering — mobile, backend, IoT, cloud, and AI integration." },
-    ],
-  }),
-  component: ServicesPage,
-});
-
-function ServicesPage() {
+export default function ServicesPage() {
   return (
     <>
       <section className="section-paper border-b border-border">

@@ -1,20 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { SectionEyebrow } from "@/components/SectionEyebrow";
 import { projects } from "@/data/site";
 
-export const Route = createFileRoute("/projects")({
-  head: () => ({
-    meta: [
-      { title: "Projects — FinBridge Solutions" },
-      { name: "description", content: "A mix of IoT products, mobile experiences, and real-world production systems delivered across multiple industries." },
-      { property: "og:title", content: "Selected Work — FinBridge Solutions" },
-      { property: "og:description", content: "Anitrac, Hewa-Teck, Okoa Life, E-Shamba, ASTE, DosiWatch and more — IoT, mobile, and full-stack systems we shipped." },
-    ],
-  }),
-  component: ProjectsPage,
-});
-
-function ProjectsPage() {
+export default function ProjectsPage() {
   return (
     <>
       <section className="section-paper border-b border-border">

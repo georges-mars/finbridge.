@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, NavLink } from "react-router-dom";
 import { Boxes, Menu, X, ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 
@@ -27,14 +27,17 @@ export function SiteHeader() {
 
         <nav className="hidden md:flex items-center gap-1">
           {navItems.map((item) => (
-            <Link
+            <NavLink
               key={item.to}
               to={item.to}
-              className="px-3.5 py-2 text-sm text-muted-foreground rounded-md transition-colors hover:text-foreground"
-              activeProps={{ className: "px-3.5 py-2 text-sm rounded-md text-foreground font-medium" }}
+              className={({ isActive }) =>
+                isActive
+                  ? "px-3.5 py-2 text-sm rounded-md text-foreground font-medium"
+                  : "px-3.5 py-2 text-sm text-muted-foreground rounded-md transition-colors hover:text-foreground"
+              }
             >
               {item.label}
-            </Link>
+            </NavLink>
           ))}
         </nav>
 
@@ -59,15 +62,18 @@ export function SiteHeader() {
         <div className="md:hidden border-t border-border bg-background">
           <nav className="flex flex-col p-4 gap-1">
             {navItems.map((item) => (
-              <Link
+              <NavLink
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className="px-4 py-3 text-sm text-muted-foreground rounded-md hover:text-foreground hover:bg-muted"
-                activeProps={{ className: "px-4 py-3 text-sm rounded-md text-foreground font-medium bg-muted" }}
+                className={({ isActive }) =>
+                  isActive
+                    ? "px-4 py-3 text-sm rounded-md text-foreground font-medium bg-muted"
+                    : "px-4 py-3 text-sm text-muted-foreground rounded-md hover:text-foreground hover:bg-muted"
+                }
               >
                 {item.label}
-              </Link>
+              </NavLink>
             ))}
             <Link
               to="/contact"

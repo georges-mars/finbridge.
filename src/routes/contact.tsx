@@ -1,19 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Mail, MapPin, Clock, Phone, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { SectionEyebrow } from "@/components/SectionEyebrow";
-
-export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — FinBridge Solutions" },
-      { name: "description", content: "Tell us what you are building and where you need help. We will come back with a clear technical path and next steps." },
-      { property: "og:title", content: "Let's build something great — FinBridge Solutions" },
-      { property: "og:description", content: "Get in touch with the FinBridge Solutions engineering team." },
-    ],
-  }),
-  component: ContactPage,
-});
 
 const contactInfo = [
   { icon: Mail, label: "Email", value: "georgesmars8@gmail.com" },
@@ -22,7 +9,7 @@ const contactInfo = [
   { icon: Phone, label: "Phone / WhatsApp", value: "+254 716 555 810" },
 ];
 
-function ContactPage() {
+export default function ContactPage() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
